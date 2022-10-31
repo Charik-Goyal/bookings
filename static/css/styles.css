@@ -16,5 +16,5 @@
 }
 
 .datepicker {
-    z-index: 2147483647;
+    z-index: 100000;
 }

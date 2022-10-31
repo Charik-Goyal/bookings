@@ -1,0 +1,56 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="/static/images/generals-suite.png"
+                class="img-fluid img-thumbnail mx-auto d-block img-thumbnail room-image" alt="General's-suite">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mt-4">General's Suit</h1>
+            <p>Your home away from home, set on holy waters of ganga, this will be vacation to remember,
+                Your home away from home, set on holy waters of ganga, this will be vacation to remember,
+                Your home away from home, set on holy waters of ganga, this will be vacation to remember,
+                Your home away from home, set on holy waters of ganga, this will be vacation to remember,
+                Your home away from home, set on holy waters of ganga, this will be vacation to remember
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <a id="check-availability-button" href="#!" class="btn btn-success">Check Availability</a>
+        </div>
+    </div>
+</div>
+{{end}}
+
+{{define "js"}}
+<script>
+    document.getElementById("check-availability-button").addEventListener("click", function () {
+        // notifyModal("title", "<em>Hello world</em>", "success", "My text for the button")
+        let html = `
+                <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row" id="reservation-dates-modal">
+                                <div class="col">
+                                    <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">   
+                            </div>
+                            <div class="col">
+                                    <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">   
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            `
+        attention.custom({ msg: html, title: "Pick date" })
+    })
+</script>
+{{end}}
