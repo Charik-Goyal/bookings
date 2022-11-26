@@ -1,0 +1,23 @@
+mode: set
+github.com/Charik-Goyal/bookings/internal/render/render.go:23.40,25.2 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:28.84,34.2 5 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:37.105,41.18 2 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:50.2,51.9 2 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:57.2,64.16 5 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:76.2,76.12 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:41.18,44.3 1 0
+github.com/Charik-Goyal/bookings/internal/render/render.go:44.8,47.3 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:51.9,54.3 2 0
+github.com/Charik-Goyal/bookings/internal/render/render.go:64.16,67.3 2 0
+github.com/Charik-Goyal/bookings/internal/render/render.go:80.67,86.16 3 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:90.2,90.29 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:111.2,111.21 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:86.16,88.3 1 0
+github.com/Charik-Goyal/bookings/internal/render/render.go:90.29,93.17 3 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:97.3,98.17 2 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:102.3,102.23 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:109.3,109.21 1 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:93.17,95.4 1 0
+github.com/Charik-Goyal/bookings/internal/render/render.go:98.17,100.4 1 0
+github.com/Charik-Goyal/bookings/internal/render/render.go:102.23,104.18 2 1
+github.com/Charik-Goyal/bookings/internal/render/render.go:104.18,106.5 1 0

@@ -1,0 +1,22 @@
+mode: set
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:24.47,28.2 1 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:31.33,33.2 1 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:36.67,40.2 3 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:43.68,55.2 5 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:58.74,67.2 4 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:70.78,72.16 2 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:77.2,91.19 6 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:102.2,104.66 2 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:72.16,75.3 2 0
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:91.19,100.3 4 0
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:108.71,110.2 1 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:113.69,115.2 1 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:118.75,120.2 1 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:123.79,128.2 3 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:136.79,143.16 3 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:147.2,148.14 2 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:143.16,145.3 1 0
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:152.70,154.2 1 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:156.81,158.9 2 1
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:165.2,171.4 4 0
+github.com/Charik-Goyal/bookings/internal/handlers/handlers.go:158.9,163.3 4 1
