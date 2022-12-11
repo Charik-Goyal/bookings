@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/Charik-Goyal/bookings/internal/config"
+	"github.com/Charik-Goyal/bookings/internal/driver"
 	"github.com/Charik-Goyal/bookings/internal/handlers"
 	"github.com/Charik-Goyal/bookings/internal/helpers"
 	"github.com/Charik-Goyal/bookings/internal/models"
@@ -25,10 +26,11 @@ var errorLog *log.Logger
 
 func main() {
 
-	err := run()
+	db, err := run()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer db.SQL.Close()
 
 	fmt.Println(fmt.Sprintf("Starting application on port %s", portNumber))
 	// _ = http.ListenAndServe(portNumber, nil)
@@ -42,7 +44,7 @@ func main() {
 	log.Fatal(err)
 }
 
-func run() error {
+func run() (*driver.DB, error) {
 
 	//What am I going to put in the session
 	gob.Register(models.Reservation{})
@@ -64,10 +66,18 @@ func run() error {
 
 	app.Session = session
 
+	// Connect to database
+	log.Println("Connecting to database")
+	db, err := driver.ConnectSQL("host=localhost port=5432 dbname=bookings user=postgres password=charik123")
+	if err != nil {
+		log.Fatal("Cannot connect to database! Dying...")
+	}
+	log.Println("Connected to database")
+
 	tc, err := render.CreateTemplateCache()
 	if err != nil {
 		log.Fatal("Cannot create template cache")
-		return err
+		return nil, err
 	}
 
 	app.TemplateCache = tc
@@ -75,9 +85,9 @@ func run() error {
 
 	render.NewTemplates(&app)
 
-	repo := handlers.NewRepo(&app)
+	repo := handlers.NewRepo(&app, db)
 	handlers.NewHandlers(repo)
 	helpers.NewHelpers(&app)
 
-	return nil
+	return db, nil
 }
