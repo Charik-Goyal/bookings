@@ -6,13 +6,21 @@
 
     <div class="row">
         <div class="col">
-            <h1>Make reservation</h1>
-            <b>Reservation Details</b>
-
             {{$res := index .Data "reservation"}}
+            <h1>Make reservation</h1>
+            <p><strong>Reservation Details</strong><br>
+                Room: {{$res.Room.RoomName}}<br>
+                Arrival: {{index .StringMap "start_date"}}<br>
+                Departure: {{index .StringMap "end_date"}}
+            </p>
+            
 
             <form method="post" action="/make-reservation" class="" novalidate>
                 <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                <input type="hidden" name="start_date" value="{{index .StringMap "start_date"}}">
+                <input type="hidden" name="end_date" value="{{index .StringMap "end_date"}}">
+                <input type="hidden" name="room_id" value="{{$res.RoomID}}">
+
                 <div class="form-group mt-4">
                     <label for="first_name">First name:</label>
                     {{with .Form.Errors.Get "first_name"}}

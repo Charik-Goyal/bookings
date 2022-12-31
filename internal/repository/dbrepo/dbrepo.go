@@ -13,6 +13,7 @@ type postgresDBRepo struct {
 }
 
 func NewPostgresRepo(conn *sql.DB, a *config.AppConfig) repository.DatabaseRepo {
+	// Because of this NewPostgresRepo we are getting postgresDBRepo as reciever in interface DatabaseRepo
 	return &postgresDBRepo{
 		App: a,
 		DB:  conn,
