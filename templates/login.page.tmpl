@@ -1,0 +1,37 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Login</h1>
+
+            <form method="post" action="/user/login" novalidate>
+                <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                <div class="form-group mt-4">
+                    <label for="email">Email:</label>
+                    {{with .Form.Errors.Get "email"}}
+                    <label class="text-danger">{{.}}</label>
+                    {{end}}
+                    <input class="form-control {{with .Form.Errors.Get "email"}} is-invalid {{end}}" type="email"
+                        name="email" id="email" value="" required autocomplete="off">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="password">Password:</label>
+                    {{with .Form.Errors.Get "password"}}
+                    <label class="text-danger">{{.}}</label>
+                    {{end}}
+                    <input class="form-control {{with .Form.Errors.Get "password"}} is-invalid {{end}}" type="password"
+                        name="password" id="password" value="" required autocomplete="off">
+                </div>
+
+                <hr>
+
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{{end}}

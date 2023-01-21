@@ -49,6 +49,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                    {{ if eq .IsAuthenticated 1}}
+                        <a class="nav-link" href="/user/logout">Logout</a>
+                    {{else}}
+                        <a class="nav-link" href="/user/login">Login</a>
+                    {{end}}
+                    </li>
 
                 </ul>
             </div>
@@ -125,17 +132,17 @@
                 })
             }
 
-            {{with .Error}}
+            {{ with .Error}}
             notify("{{.}}", "error")
-            {{end}}
+            {{ end }}
 
-            {{with .Flash}}
+            {{ with .Flash}}
             notify("{{.}}", "success")
-            {{end}}
+            {{ end }}
 
-            {{with .Warning}}
+            {{ with .Warning}}
             notify("{{.}}", "warning")
-            {{end}}
+            {{ end }}
         </script>
     </body>
 
