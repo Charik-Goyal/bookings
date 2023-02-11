@@ -60,7 +60,7 @@ function Prompt() {
         } = c
 
         const { value: result } = await Swal.fire({
-            icon:icon,
+            icon: icon,
             title: title,
             html: msg,
             backdrop: false,
@@ -71,12 +71,6 @@ function Prompt() {
                 if (c.willOpen !== undefined) {
                     c.willOpen()
                 }
-            },
-            preConfirm: () => {
-                return [
-                    document.getElementById('start').value,
-                    document.getElementById('end').value
-                ]
             },
             didOpen: () => {
                 if (c.didOpen !== undefined) {
